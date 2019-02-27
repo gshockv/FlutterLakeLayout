@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'favorite_widget.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -7,11 +9,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Layout Demo',
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
-      home: MyHomePage(title: 'Flutter Layout Demo'),
+      home: MyHomePage(title: 'Lake'),
     );
   }
 }
@@ -83,11 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            Icon(
-              Icons.star,
-              color: Colors.red[500],
-            ),
-            Text('41'),
+
+            FavoriteWidget(),
+
           ],
         ),
       );
